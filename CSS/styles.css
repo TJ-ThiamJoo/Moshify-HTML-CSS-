@@ -26,6 +26,10 @@ html {
   font-size: 62.5%;
 }
 
+img {
+  width: 100%;
+}
+
 body {
   color: var(--color-body);
   font-family: Inter, Arial, Helvetica, sans-serif;
@@ -62,12 +66,15 @@ p {
   body {
     font-size: 1.8rem;
   }
+
   h1 {
     font-size: 8rem;
   }
+
   h2 {
     font-size: 4rem;
   }
+
   h3 {
     font-size: 2.4rem;
   }
@@ -129,6 +136,7 @@ a {
   .badge {
     font-size: 1.5rem;
   }
+
   .badge--small {
     font-size: 1.2rem;
   }
@@ -204,7 +212,7 @@ a {
   font-weight: 600;
   margin: 1rem 0;
   outline: 0;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -295,6 +303,7 @@ a {
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 2rem;
+  width: 0;
 }
 
 .input-group .btn {
@@ -369,11 +378,6 @@ a {
 
 .plan .list__item {
   margin-bottom: 2rem;
-  letter-spacing: 1px;
-}
-
-.plan--popular {
-  transform: scale(1.1);
 }
 
 .plan--popular .card__header {
@@ -398,15 +402,22 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
+  .plan--popular {
+    transform: scale(1.1);
+  }
+
   .plan__name {
     font-size: 1.4rem;
   }
+
   .plan__price {
     font-size: 5rem;
   }
+
   .plan__billing-cycle {
     font-size: 1.6rem;
   }
+
   .plan__description {
     font-size: 1.7rem;
   }
@@ -501,12 +512,14 @@ a {
   padding: 3rem;
 }
 
-.testimonial__image {
-  position: relative;
+.testimonial .quote {
+  margin: 2rem 0;
+  font-size: 110%;
 }
 
-.testimonial__image > img {
-  width: 100%;
+.testimonial__image {
+  position: relative;
+  margin: 0 3rem;
 }
 
 .testimonial__image > .icon-container {
@@ -516,12 +529,14 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  .testimonial .quote,
-  .testimonial .quote__author {
-    font-size: 2.4rem;
+  .testimonial__image {
+    margin: 0;
   }
+
   .testimonial .quote {
-    margin-left: 6rem;
+    margin: 5rem 0 0 6rem;
+    font-size: 120%;
+    line-height: 1.5;
   }
 }
 
@@ -559,6 +574,7 @@ a {
   .callout__content {
     text-align: left;
   }
+
   .callout .btn {
     justify-self: start;
     margin: 0 2rem;
@@ -658,6 +674,10 @@ a {
   border-bottom: 1px solid #222;
 }
 
+.nav__item:last-of-type {
+  border-bottom: none;
+}
+
 .nav__item > a {
   color: #d2d0db;
   transition: color 0.3s;
@@ -681,6 +701,7 @@ a {
 
 .nav__brand {
   transform: translateY(5px);
+  width: 150px;
 }
 
 @media screen and (min-width: 768px) {
@@ -709,18 +730,16 @@ a {
   margin: 2rem 0 5rem;
 }
 
-.hero__image {
-  width: 100%;
-}
-
 @media screen and (min-width: 768px) {
-  .hero {
-    padding-top: 0;
-  }
-
   .hero__content {
     text-align: left;
     align-self: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    padding-top: 0;
   }
 }
 
@@ -733,8 +752,9 @@ a {
 }
 
 .block-domain__prices {
+  color: var(--color-heading);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   font-size: 2rem;
   font-weight: 600;
@@ -773,10 +793,6 @@ a {
   margin: 1rem 0;
 }
 
-.feature__image {
-  width: 100%;
-}
-
 @media screen and (min-width: 768px) {
   .feature:nth-child(even) .feature__content {
     order: 2;
@@ -784,10 +800,6 @@ a {
 }
 
 /* Showcase Block */
-.block-showcase__image > img {
-  width: 100%;
-}
-
 @media screen and (min-width: 768px) {
   .block-showcase .grid {
     grid-template-columns: 50% 50%;
@@ -806,6 +818,7 @@ a {
 /* Footer */
 .footer {
   background: #232323;
+  padding-top: 10rem;
 }
 
 .footer a {
@@ -829,6 +842,8 @@ a {
 .footer__heading {
   text-transform: uppercase;
   font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 1.5;
 }
 
 .footer__brand {
@@ -837,7 +852,6 @@ a {
 }
 
 .footer__brand img {
-  width: 100%;
   max-width: 230px;
 }
 
@@ -848,6 +862,10 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+  .footer {
+    font-size: 1.5rem;
+  }
+
   .footer__sections {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
@@ -877,4 +895,9 @@ a {
   .footer__heading {
     font-size: 1.6rem;
   }
+}
+
+/* Sign-up Callout */
+.callout-signup {
+  transform: translateY(5rem);
 }
