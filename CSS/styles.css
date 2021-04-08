@@ -837,12 +837,13 @@ a {
 
 .footer__section .list {
   margin: 0;
+  font-size: 1.8rem;
 }
 
 .footer__heading {
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 1.5;
 }
 
